@@ -22,9 +22,13 @@ DATA = {
 # Напишите ваш обработчик. Используйте DATA как источник данных
 # Результат - render(request, 'calculator/index.html', context)
 # В качестве контекста должен быть передан словарь с рецептом:
-# context = {
-#   'recipe': {
-#     'ингредиент1': количество1,
-#     'ингредиент2': количество2,
-#   }
-# }
+def show_recipe(request, recipe = 'omlet'):
+    servings  = int(request.GET.get('servings', 1))
+    my_recipe = DATA.get(recipe)
+    my_recipe= {k : v * servings for (k, v) in my_recipe.items()}     
+    context = {
+               'recipe': my_recipe
+              }
+    return render(request, 'calculator/index.html', context)
+
+    
