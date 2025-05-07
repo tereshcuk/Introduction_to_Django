@@ -10,11 +10,29 @@
   },
   {
     "model": "books.book",
+    "pk": 3,
+    "fields": {
+      "name": "Записки охотника",
+      "author": "И.С. Тургенев",
+      "pub_date": "2017-02-27"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 4,
+    "fields": {
+      "name": "Вий",
+      "author": "Н. В. Гоголь",
+      "pub_date": "2016-11-06"
+    }
+  },
+  {
+    "model": "books.book",
     "pk": 2,
     "fields": {
       "name": "1984",
       "author": "Джордж Оруэл",
-      "pub_date": "2016-12-06"
+      "pub_date": "2015-12-06"
     }
   }
 ]
