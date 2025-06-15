@@ -10,7 +10,7 @@ Content-Type: application/json
 ###
 
 # получение объявлений
-GET {{baseUrl}}/advertisements/?status=2
+GET {{baseUrl}}/advertisements/?status=OPEN
 Content-Type: application/json
 
 
